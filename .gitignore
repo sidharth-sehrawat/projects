@@ -1,37 +1,30 @@
-# ====================================================================
 # Terraform
-# ====================================================================
-# Core terraform directories containing heavy provider binaries
-**/.terraform/
-
-# Local state files (can contain plain-text infrastructure secrets)
 *.tfstate
 *.tfstate.*
+.terraform/
 
-# Crash logs
-crash.log
 
-# Terraform variables (uncomment if you want to keep your secret tfvars local)
-# *.tfvars
-# *.tfvars.json
+# Kubernetes
+kubeconfig
 
-# Override files
-override.tf
-override.tf.json
-_override.tf
-_override.tf.json
-
-# ====================================================================
-# Helm & Kubernetes (GitOps)
-# ====================================================================
-# Look up charts dependencies
-**/charts/*.tgz
-**/charts/charts/
-
-# ====================================================================
-# System & IDE Noise
-# ====================================================================
-.DS_Store
-.idea/
+# IDE
 .vscode/
+.idea/
+
+# Linux
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Dotnet
+bin/
+obj/
+
+# Logs
 *.log
