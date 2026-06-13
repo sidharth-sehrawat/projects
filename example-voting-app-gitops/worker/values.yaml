@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: asia-south1-docker.pkg.dev/voting-app-devsecops-2026/voting-app/worker
-  tag: v1
+  tag: v2
   pullPolicy: IfNotPresent
 
 nodeSelector:
