@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: asia-south1-docker.pkg.dev/voting-app-devsecops-2026/voting-app/vote
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 80
+
+nodeSelector:
+  workload: application
