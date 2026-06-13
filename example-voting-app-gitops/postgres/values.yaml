@@ -1,0 +1,15 @@
+image:
+  repository: postgres
+  tag: "15"
+
+storage:
+  size: 10Gi
+  storageClass: standard-rwo
+
+postgres:
+  user: postgres
+  password: postgres
+  database: voting
+
+nodeSelector:
+  workload: application
