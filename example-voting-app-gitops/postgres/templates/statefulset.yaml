@@ -3,6 +3,8 @@ kind: StatefulSet
 
 metadata:
   name: postgres
+  labels:
+    app: postgres
 
 spec:
   serviceName: postgres
@@ -19,9 +21,8 @@ spec:
         app: postgres
 
     spec:
-
       nodeSelector:
-{{ toYaml .Values.nodeSelector | indent 8 }}
+        workload: application
 
       containers:
       - name: postgres
@@ -40,6 +41,9 @@ spec:
 
         - name: POSTGRES_DB
           value: "{{ .Values.postgres.database }}"
+
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
 
         volumeMounts:
         - name: postgres-storage
